@@ -6,7 +6,6 @@ import Content from './components/layout/Content'
 import Footer from './components/layout/Footer'
 import Button from './components/ui/Button'
 import TitleOne from './components/ui/TitleOne'
-import TitleTwo from './components/ui/TitleTwo'
 import TitleThree from './components/ui/TitleThree'
 
 const App = () => {
@@ -62,12 +61,7 @@ const App = () => {
       </Menu>
       <Main>
         <Sidebar links={links} />
-        <Content>
-          <TitleTwo>Pronto para aprender mais sobre React?</TitleTwo>
-          <p>Se inscreva para participar do bootcamp.</p>
-          <Button kind='primary'>Me inscrever</Button>
-          <Button kind='secondary'>Saber mais</Button>
-        </Content>
+        <Content title={links[0].title} content={links[0].content} />
       </Main>
       <Footer>
         <TitleThree>Brainn Co.</TitleThree>
