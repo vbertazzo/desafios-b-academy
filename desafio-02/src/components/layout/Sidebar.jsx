@@ -1,11 +1,19 @@
-const Sidebar = ({ links }) => {
+const Sidebar = ({ links, onClick }) => {
+  const handleClick = id => {
+    onClick(id)
+  }
+
   return (
     <aside className='sidebar'>
       {links.map(link => {
         return (
-          <a href={`/${link.id}`} key={link.id}>
+          <button
+            onClick={() => handleClick(link.id)}
+            className='link'
+            key={link.id}
+          >
             {link.title}
-          </a>
+          </button>
         )
       })}
     </aside>

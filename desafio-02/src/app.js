@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Header from './components/layout/Header'
 import Menu from './components/layout/Menu'
 import Main from './components/layout/Main'
@@ -19,7 +20,7 @@ const App = () => {
             Não adianta falar mal do React e ir pro Vue e Svelte, antes de se
             esforçar pra entender como ele funciona.
           </p>
-          <Button kind='primary'>Se inscrever no curso</Button>
+          <Button kind='primary'>Me inscrever no curso</Button>
         </>
       )
     },
@@ -50,6 +51,12 @@ const App = () => {
     }
   ]
 
+  const [currentLink, setCurrentLink] = useState(links[0])
+
+  const handleLinkClick = id => {
+    setCurrentLink(links.find(link => link.id === id))
+  }
+
   return (
     <>
       <Header>
@@ -60,8 +67,8 @@ const App = () => {
         <a href='/sobre'>Sobre a Brainn</a>
       </Menu>
       <Main>
-        <Sidebar links={links} />
-        <Content title={links[0].title} content={links[0].content} />
+        <Sidebar links={links} onClick={handleLinkClick} />
+        <Content title={currentLink.title} content={currentLink.content} />
       </Main>
       <Footer>
         <TitleThree>Brainn Co.</TitleThree>

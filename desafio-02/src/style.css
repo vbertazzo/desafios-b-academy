@@ -46,3 +46,10 @@
   color: #f73263;
   margin-left: 1rem;
 }
+
+.link {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
