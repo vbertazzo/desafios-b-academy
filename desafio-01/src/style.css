@@ -1,0 +1,33 @@
+#root {
+  height: 100vh;
+}
+
+.header {
+  height: 20%;
+  background-color: burlywood;
+}
+
+.menu {
+  height: 20%;
+  background-color: coral;
+}
+
+.main {
+  height: 40%;
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: indianred;
+}
+
+.content {
+  width: 70%;
+  background-color: hotpink;
+}
+
+.footer {
+  height: 20%;
+  background-color: seagreen;
+}
