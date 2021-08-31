@@ -1,0 +1,45 @@
+#root {
+  height: 100vh;
+}
+
+.header {
+  height: 20%;
+}
+
+.menu {
+  height: 20%;
+}
+
+.main {
+  height: 40%;
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.content {
+  width: 70%;
+}
+
+.footer {
+  height: 20%;
+}
+
+.button {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.primary {
+  background-color: #f73263;
+  color: #0d0d0d;
+}
+
+.secondary {
+  background-color: #f7f7f7;
+  border: solid 1px #f73263;
+  color: #f73263;
+  margin-left: 1rem;
+}
