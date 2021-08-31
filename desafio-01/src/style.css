@@ -4,12 +4,10 @@
 
 .header {
   height: 20%;
-  background-color: burlywood;
 }
 
 .menu {
   height: 20%;
-  background-color: coral;
 }
 
 .main {
@@ -19,15 +17,29 @@
 
 .sidebar {
   width: 30%;
-  background-color: indianred;
 }
 
 .content {
   width: 70%;
-  background-color: hotpink;
 }
 
 .footer {
   height: 20%;
-  background-color: seagreen;
+}
+
+.button {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.primary {
+  background-color: #f73263;
+  color: #0d0d0d;
+}
+
+.secondary {
+  background-color: #f7f7f7;
+  border: solid 1px #f73263;
+  color: #f73263;
+  margin-left: 1rem;
 }
