@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react'
-import CarsForm from './components/CarsForm'
-import CarsTable from './components/CarsTable'
+import CarsForm from './components/CarsForm/CarsForm'
+import CarsTable from './components/CarsTable/CarsTable'
+import Header from './components/Header/Header'
+import Lines from './components/Lines/Lines'
+import CarsContainer from './components/CarsContainer/CarsContainer'
+import Main from './components/Main/Main'
+import Message from './components/Message/Message'
 import { get, post, del } from './utils/http'
 
 function App () {
@@ -66,11 +71,15 @@ function App () {
 
   return (
     <>
-      <main className='cars'>
-        <CarsForm onSubmit={addCar} />
-        <CarsTable cars={cars} onRemove={removeCar} />
-      </main>
-      {error.active && <p className='error'>{error.message}</p>}
+      <Main>
+        <Header />
+        {error.active && <Message>{error.message}</Message>}
+        <Lines />
+        <CarsContainer>
+          <CarsForm onSubmit={addCar} />
+          <CarsTable cars={cars} onRemove={removeCar} />
+        </CarsContainer>
+      </Main>
     </>
   )
 }
