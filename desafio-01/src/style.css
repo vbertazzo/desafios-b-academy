@@ -1,44 +1,136 @@
+:root {
+  --primary: #ff3366;
+  --secondary: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 5vh 5vh 80vh 10vh;
+  grid-template-areas:
+    'header header'
+    'menu menu'
+    'sidebar content'
+    'footer footer';
+
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header {
-  height: 20%;
+  grid-area: header;
+  padding: 1rem;
+  background-color: black;
+  color: var(--primary);
+  font-size: 0.8rem;
 }
 
 .menu {
-  height: 20%;
+  grid-area: menu;
+  background: var(--secondary);
+  padding: 1.5rem 5rem;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
-.main {
-  height: 40%;
-  display: flex;
+.menu a {
+  color: black;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding-bottom: 1.2rem;
+}
+
+.menu a:hover {
+  transform: translateY(-4px);
+  border-bottom: solid 4px var(--primary);
 }
 
 .sidebar {
-  width: 30%;
+  padding: 4rem 4rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: solid 4px var(--primary);
+  margin-bottom: 4rem;
+  max-width: max-content;
+}
+
+.sidebar li {
+  list-style: none;
+  margin-bottom: 1rem;
 }
 
 .content {
-  width: 70%;
+  grid-area: content;
+  padding: 4rem 4rem;
+  background: white;
+}
+
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+.content p {
+  margin-bottom: 2rem;
 }
 
 .footer {
-  height: 20%;
+  grid-area: footer;
+  background: black;
+  padding: 1.5rem 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer h3 {
+  color: white;
+}
+
+.footer a {
+  margin-top: 1rem;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.footer a:hover {
+  color: white;
 }
 
 .button {
-  padding: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border: none;
 }
 
 .primary {
-  background-color: #f73263;
+  background: #f73263;
   color: #0d0d0d;
 }
 
 .secondary {
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   border: solid 1px #f73263;
   color: #f73263;
   margin-left: 1rem;
