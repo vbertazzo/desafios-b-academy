@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.footer`
-  margin-top: auto;
-
-  height: 8rem;
+  grid-area: footer;
   background: black;
   padding: 1.5rem 5rem;
 
@@ -16,5 +14,9 @@ export const Wrapper = styled.footer`
     margin-top: 1rem;
     color: var(--primary);
     font-size: 1rem;
+  }
+
+  a:hover {
+    color: white;
   }
 `

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.article`
+  grid-area: content;
   padding: 4rem 4rem;
   flex-grow: 1;
+  background: white;
 
   display: flex;
   justify-content: center;
@@ -16,7 +18,7 @@ export const Content = styled.div`
   flex-direction: column;
 
   img {
-    width: 30rem;
+    max-width: 30rem;
   }
 
   p {
@@ -29,6 +31,10 @@ export const Content = styled.div`
     font-size: 1.1rem;
   }
 
+  a:hover {
+    color: black;
+  }
+
   .buttons {
     display: flex;
 
@@ -39,7 +45,7 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
 `

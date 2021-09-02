@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const Sidebar = styled.aside`
+  grid-area: sidebar;
   padding: 4rem 4rem;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
 
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 `
 
 export const Title = styled.h2`
@@ -15,6 +16,7 @@ export const Title = styled.h2`
   padding-bottom: 0.4rem;
   border-bottom: solid 4px var(--primary);
   margin-bottom: 4rem;
+  max-width: max-content;
 `
 
 export const List = styled.ul`

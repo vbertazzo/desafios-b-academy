@@ -1,16 +1,15 @@
 import { useState } from 'react'
-import Header from './components/layout/Header/Header'
-import Menu from './components/layout/Menu/Menu'
-import Main from './components/layout/Main/Main'
-import Sidebar from './components/layout/Sidebar/Sidebar'
-import Content from './components/layout/Content/Content'
-import Footer from './components/layout/Footer/Footer'
-import Button from './components/ui/Button/Button'
-import TitleThree from './components/ui/TitleThree'
-import Link from './components/ui/Link/Link'
+import Header from './components/layout/header/header'
+import Menu from './components/layout/menu/menu'
+import Sidebar from './components/layout/sidebar/sidebar'
+import Content from './components/layout/content/content'
+import Footer from './components/layout/footer/footer'
+import Button from './components/ui/button/button'
+import { H3 } from './components/ui/headings'
+import Link from './components/ui/link/link'
 import { ReactComponent as Logo } from './assets/logo.svg'
 
-import GlobalStyles from './globalStyles'
+import GlobalStyles from './global-styles'
 
 const App = () => {
   const links = [
@@ -23,7 +22,7 @@ const App = () => {
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png'
             alt='React Logo'
           />
-          <TitleThree>Declarativo</TitleThree>
+          <H3>Declarativo</H3>
           <p>
             React faz com que a criação de UIs interativas seja uma tarefa
             fácil. Crie views simples para cada estado na sua aplicação, e o
@@ -82,17 +81,17 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <Header />
+      <Header>
+        <Logo />
+      </Header>
       <Menu>
         <Link to='/bootcamp' active>
           Bootcamp
         </Link>
         <Link to='/sobre'>Sobre a Brainn</Link>
       </Menu>
-      <Main>
-        <Sidebar links={links} onClick={handleLinkClick} />
-        <Content title={currentLink.title} content={currentLink.content} />
-      </Main>
+      <Sidebar links={links} onClick={handleLinkClick} />
+      <Content title={currentLink.title} content={currentLink.content} />
       <Footer>
         <Logo />
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>

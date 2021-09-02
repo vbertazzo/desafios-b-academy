@@ -14,12 +14,21 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: Poppins, Arial, Helvetica, sans-serif;
+    background: #161616;
   }
 
   #root {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 5vh 5vh 80vh 10vh;
+    grid-template-areas:
+    'header header'
+    'menu menu'
+    'sidebar content'
+    'footer footer';
+
+    max-width: 1920px;
+    margin: 0 auto;
   }
 `
 
