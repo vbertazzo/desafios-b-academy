@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   background: white;
   min-width: 24rem;
   max-width: 42rem;
+  border-radius: 2rem;
 
   display: flex;
   flex-direction: column;

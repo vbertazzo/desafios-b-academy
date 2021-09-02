@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
-import CarsForm from './components/CarsForm/CarsForm'
-import CarsTable from './components/CarsTable/CarsTable'
-import Header from './components/Header/Header'
-import Lines from './components/Lines/Lines'
-import CarsContainer from './components/CarsContainer/CarsContainer'
-import Main from './components/Main/Main'
-import Message from './components/Message/Message'
+import CarsForm from './components/cars-form/cars-form'
+import CarsTable from './components/cars-table/cars-table'
+import Header from './components/header/header'
+import Lines from './components/lines/lines'
+import CarsContainer from './components/cars-container/cars-container'
+import Main from './components/main/main'
+import Message from './components/message/message'
 import { get, post, del } from './utils/http'
 
 function App () {

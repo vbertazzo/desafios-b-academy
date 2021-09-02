@@ -12,6 +12,6 @@ const createRequest = method => (url, data) =>
     body: JSON.stringify(data)
   })
 
-export const get = url => request(url)
+export const get = request
 export const post = createRequest('POST')
 export const del = createRequest('DELETE')
