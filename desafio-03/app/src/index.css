@@ -1,26 +1,158 @@
+:root {
+  --primary: #ff3366;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  background: black;
 }
 
-form {
-  margin-bottom: 60px;
-}
+#root {
+  padding: 4rem;
+  min-height: 100vh;
 
-label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cars {
   display: flex;
 }
 
-.car-image {
+.cars-form-wrapper {
+  margin-right: 5rem;
+  padding: 2rem;
+  background: white;
+  min-width: 24rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cars-form-wrapper h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: max-content;
+  border-bottom: solid 4px var(--primary);
+}
+
+.cars-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cars-form button {
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  color: black;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.cars-form button:hover {
+  color: var(--primary);
+  background: black;
+}
+
+.cars-form label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.cars-form input {
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 0.6rem;
+  width: 14rem;
+}
+
+.cars-table-wrapper {
+  padding: 2rem;
+  background: white;
+  min-width: 24rem;
+  max-width: 42rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cars-table-wrapper h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: max-content;
+  border-bottom: solid 4px var(--primary);
+}
+
+.cars-table {
+  border-top: solid 1px black;
+  border-spacing: 0;
+}
+
+.cars-table th {
+  padding: 0.3rem 0.5rem;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.cars-table th:first-child {
+  border-left: solid 1px black;
+}
+
+.cars-table td {
+  padding: 0.3rem 0.6rem;
+  text-align: center;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.cars-table td:first-child {
+  border-left: solid 1px black;
+}
+
+.cars-table img {
   width: 10rem;
+  border-radius: 1rem;
+}
+
+.cars-table-message {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem 0;
+  border-left: solid 1px black;
+  border-bottom: solid 1px black;
+  border-right: solid 1px black;
+}
+
+.cars-table button {
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cars-table button:hover {
+  color: var(--primary);
 }
 
 .error {
-  color: red;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-top: 3rem;
 }

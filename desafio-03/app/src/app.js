@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import CarsForm from './components/CarsForm'
-import CarsTable from './components/CarsTable'
+import CarsForm from './components/cars-form'
+import CarsTable from './components/cars-table'
 import { get, post, del } from './utils/http'
 
 function App () {
