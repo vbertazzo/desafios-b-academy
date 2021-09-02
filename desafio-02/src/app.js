@@ -1,77 +1,97 @@
 import { useState } from 'react'
-import Header from './components/layout/Header'
-import Menu from './components/layout/Menu'
-import Main from './components/layout/Main'
-import Sidebar from './components/layout/Sidebar'
-import Content from './components/layout/Content'
-import Footer from './components/layout/Footer'
-import Button from './components/ui/Button'
-import TitleOne from './components/ui/TitleOne'
-import TitleThree from './components/ui/TitleThree'
+import Header from './components/layout/header'
+import Menu from './components/layout/menu'
+import Sidebar from './components/layout/sidebar'
+import Content from './components/layout/content'
+import Footer from './components/layout/footer'
+import Button from './components/ui/button'
+import { H1, H3 } from './components/ui/headings'
 
 const App = () => {
-  const links = [
+  const articles = [
     {
       id: 1,
-      title: 'Entendendo o React por debaixo dos panos.',
+      title: 'Introdução ao React.js',
       content: (
         <>
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png'
+            alt='React Logo'
+          />
+          <H3>Declarativo</H3>
           <p>
-            Não adianta falar mal do React e ir pro Vue e Svelte, antes de se
-            esforçar pra entender como ele funciona.
+            React faz com que a criação de UIs interativas seja uma tarefa
+            fácil. Crie views simples para cada estado na sua aplicação, e o
+            React irá atualizar e renderizar de forma eficiente apenas os
+            componentes necessários na medida em que os dados mudam.
           </p>
-          <Button kind='primary'>Me inscrever no curso</Button>
         </>
       )
     },
     {
       id: 2,
-      title: 'Como usar useEffect de forma efetiva.',
+      title: 'Hooks',
       content: (
         <>
+          <img
+            src='https://thumbs.dreamstime.com/b/evil-robot-full-growth-humanoid-futuristic-evil-robot-full-growth-humanoid-futuristic-cyborg-killer-flat-illustration-154002920.jpg'
+            alt='GitHub Copilot is evil'
+          />
           <p>
-            Chega de re-renders sem sentido, chegou a hora de entender o array
-            de dependências do useEffect.
+            Melhor aprender sobre Hooks para o GitHub Co-pilot não roubar meu
+            emprego. 😰
           </p>
-          <Button kind='secondary'>Mais informações</Button>
+          <a href='https://www.google.com/search?q=vagas+de+emprego'>
+            Mudar de profissão
+          </a>
         </>
       )
     },
     {
       id: 3,
-      title: 'Vou perder meu trabalho para o GitHub Co-pilot?',
+      title: 'Styled Components',
       content: (
         <>
+          <img
+            src='https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png'
+            alt='Styled Components Logo'
+          />
           <p>
-            O GitHub Co-pilot assumiu a cadeira de piloto e me jogou do avião.
+            Styled Components serve pra dar um tapa no visu. Exemplo de botões:
           </p>
-          <Button kind='primary'>Mudar de profissão</Button>
+          <div>
+            <Button kind='primary'>Primary</Button>
+            <Button kind='secondary'>Secondary</Button>
+          </div>
         </>
       )
     }
   ]
 
-  const [currentLink, setCurrentLink] = useState(links[0])
+  const [currentArticle, setCurrentArticle] = useState(articles[0])
 
-  const handleLinkClick = id => {
-    setCurrentLink(links.find(link => link.id === id))
+  function onLinkClick (id) {
+    const nextArticle = articles.find(article => article.id === id)
+
+    if (!nextArticle) {
+      return
+    }
+
+    setCurrentArticle(nextArticle)
   }
 
   return (
     <>
       <Header>
-        <TitleOne>Bootcamp B-Academy</TitleOne>
+        <H1>Bootcamp B-Academy</H1>
       </Header>
       <Menu>
-        <a href='/bootcamp'>Bootcamp</a>
-        <a href='/sobre'>Sobre a Brainn</a>
+        <a href=''>Grade do Curso</a>
       </Menu>
-      <Main>
-        <Sidebar links={links} onClick={handleLinkClick} />
-        <Content title={currentLink.title} content={currentLink.content} />
-      </Main>
+      <Sidebar articles={articles} onLinkClick={onLinkClick} />
+      <Content article={currentArticle} />
       <Footer>
-        <TitleThree>Brainn Co.</TitleThree>
+        <H3>Brainn Co.</H3>
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>
       </Footer>
     </>
