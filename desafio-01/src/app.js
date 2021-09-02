@@ -1,19 +1,17 @@
-import Header from './components/layout/Header'
-import Menu from './components/layout/Menu'
-import Main from './components/layout/Main'
-import Sidebar from './components/layout/Sidebar'
-import Content from './components/layout/Content'
-import Footer from './components/layout/Footer'
-import Button from './components/ui/Button'
-import TitleOne from './components/ui/TitleOne'
-import TitleTwo from './components/ui/TitleTwo'
-import TitleThree from './components/ui/TitleThree'
+import Header from './components/layout/header'
+import Menu from './components/layout/menu'
+import Main from './components/layout/main'
+import Sidebar from './components/layout/sidebar'
+import Content from './components/layout/content'
+import Footer from './components/layout/footer'
+import Button from './components/ui/button'
+import { H1, H2, H3 } from './components/ui/headings'
 
 const App = () => {
   return (
     <>
       <Header>
-        <TitleOne>Bootcamp B-Academy</TitleOne>
+        <H1>Bootcamp B-Academy</H1>
       </Header>
       <Menu>
         <a href='/bootcamp'>Bootcamp</a>
@@ -21,7 +19,7 @@ const App = () => {
       </Menu>
       <Main>
         <Sidebar>
-          <TitleTwo>Tópicos</TitleTwo>
+          <H2>Tópicos</H2>
           <ul>
             <li>JSX e Virtual DOM</li>
             <li>Create React App</li>
@@ -31,14 +29,14 @@ const App = () => {
           </ul>
         </Sidebar>
         <Content>
-          <TitleTwo>Pronto para aprender mais sobre React?</TitleTwo>
+          <H2>Pronto para aprender mais sobre React?</H2>
           <p>Se inscreva para participar do bootcamp.</p>
           <Button kind='primary'>Me inscrever</Button>
           <Button kind='secondary'>Saber mais</Button>
         </Content>
       </Main>
       <Footer>
-        <TitleThree>Brainn Co.</TitleThree>
+        <H3>Brainn Co.</H3>
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>
       </Footer>
     </>
