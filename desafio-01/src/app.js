@@ -13,7 +13,7 @@ const App = () => {
         <H1>B. Academy Bootcamp</H1>
       </Header>
       <Menu>
-        <a href=''>Grade do Curso</a>
+        <a href='/grade'>Grade do Curso</a>
       </Menu>
       <Sidebar>
         <H2>Conteúdo do Bootcamp</H2>
