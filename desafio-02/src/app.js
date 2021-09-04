@@ -86,7 +86,7 @@ const App = () => {
         <H1>Bootcamp B-Academy</H1>
       </Header>
       <Menu>
-        <a href=''>Grade do Curso</a>
+        <a href='/grade'>Grade do Curso</a>
       </Menu>
       <Sidebar articles={articles} onLinkClick={onLinkClick} />
       <Content article={currentArticle} />
