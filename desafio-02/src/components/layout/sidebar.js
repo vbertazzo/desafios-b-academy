@@ -11,10 +11,7 @@ const Sidebar = ({ articles, onLinkClick }) => {
       <ul>
         {articles.map(article => (
           <li key={article.id}>
-            <button
-              className='nav-button'
-              onClick={() => handleLinkClick(article.id)}
-            >
+            <button onClick={() => handleLinkClick(article.id)}>
               {article.title}
             </button>
           </li>
