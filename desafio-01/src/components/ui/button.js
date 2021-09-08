@@ -1,5 +1,4 @@
-const Button = props => {
-  const { kind, children } = props
+const Button = ({ kind, children }) => {
   return <button className={`button ${kind}`}>{children}</button>
 }
 
