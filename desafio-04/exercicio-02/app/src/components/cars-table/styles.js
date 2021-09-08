@@ -55,6 +55,15 @@ export const Td = styled.td`
   }
 `
 
+export const ColorContainer = styled.div`
+  height: 2rem;
+  width: 2rem;
+  border: solid 1px black;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  background-color: ${({ color }) => (color ? color : 'white')};
+`
+
 export const Image = styled.img`
   width: 10rem;
   border-radius: 1rem;

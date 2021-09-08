@@ -40,7 +40,10 @@ const CarsTable = ({ cars, onRemove }) => {
                 <S.Td>{car.brandModel}</S.Td>
                 <S.Td>{car.year}</S.Td>
                 <S.Td>{car.plate}</S.Td>
-                <S.Td>{car.color}</S.Td>
+                <S.Td>
+                  <S.ColorContainer color={car.color} />
+                  {car.color}
+                </S.Td>
                 <S.Td>
                   <S.Button onClick={() => onRemove(car.plate)}>
                     Remover
