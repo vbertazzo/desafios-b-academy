@@ -1,7 +1,17 @@
 const request = (url, options) =>
   fetch(url, options)
     .then(r => r.json())
-    .catch(e => ({ error: true, message: e.message }))
+    .catch(e => {
+      if (e.message === 'Failed to fetch') {
+        return {
+          error: true,
+          message:
+            'Não foi possível conectar ao servidor, Por favor, tente novamente em breve'
+        }
+      }
+
+      return { error: true, message: e.message }
+    })
 
 const createRequest = method => (url, data) =>
   request(url, {

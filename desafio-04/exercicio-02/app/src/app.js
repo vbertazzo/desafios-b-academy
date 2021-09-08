@@ -21,8 +21,7 @@ function App () {
       if (result.error) {
         setError({
           active: true,
-          message:
-            'Ocorreu um erro ao carregar os carros. Por favor, tente novamente em breve.'
+          message: result.message
         })
         return
       }
@@ -39,8 +38,7 @@ function App () {
     if (result.error) {
       setError({
         active: true,
-        message:
-          'Ocorreu um erro ao cadastrar. Por favor, tente novamente em breve.'
+        message: result.message
       })
       return
     }
@@ -57,8 +55,7 @@ function App () {
     if (result.error) {
       setError({
         active: true,
-        message:
-          'Ocorreu um erro ao deletar. Por favor, tente novamente em breve.'
+        message: result.message
       })
       return
     }
