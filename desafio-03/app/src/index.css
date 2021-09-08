@@ -128,6 +128,14 @@ body {
   border-radius: 1rem;
 }
 
+.colorSquare {
+  height: 2rem;
+  width: 2rem;
+  border: solid 1px black;
+  margin: auto;
+  margin-bottom: 0.5rem;
+}
+
 .cars-table-message {
   font-size: 1.1rem;
   text-align: center;

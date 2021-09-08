@@ -43,6 +43,7 @@ function App () {
     if (error.active) {
       setError({ active: false, message: '' })
     }
+
     setCars(prevState => prevState.concat(car))
   }
 
@@ -61,6 +62,7 @@ function App () {
     if (error.active) {
       setError({ active: false, message: '' })
     }
+
     setCars(cars.filter(car => car.plate !== plate))
   }
 

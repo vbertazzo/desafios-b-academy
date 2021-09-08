@@ -24,6 +24,7 @@ const CarsTable = ({ cars, onRemove }) => {
               </td>
             </tr>
           )}
+
           {cars.length > 0 &&
             cars.map(car => (
               <tr key={car.plate}>
@@ -33,7 +34,13 @@ const CarsTable = ({ cars, onRemove }) => {
                 <td>{car.brandModel}</td>
                 <td>{car.year}</td>
                 <td>{car.plate}</td>
-                <td>{car.color}</td>
+                <td>
+                  <div
+                    className='colorSquare'
+                    style={{ backgroundColor: car.color }}
+                  ></div>
+                  {car.color}
+                </td>
                 <td>
                   <button onClick={() => onRemove(car.plate)}>Remover</button>
                 </td>
