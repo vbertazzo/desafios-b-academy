@@ -1,10 +1,10 @@
 import { H2 } from '../ui/headings'
 
-const Content = ({ article }) => {
+const Content = ({ title, content }) => {
   return (
     <main className='content'>
-      <H2>{article.title}</H2>
-      {article.content}
+      <H2>{title}</H2>
+      {content}
     </main>
   )
 }

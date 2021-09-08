@@ -68,7 +68,8 @@ const App = () => {
     }
   ]
 
-  const [currentArticle, setCurrentArticle] = useState(articles[0])
+  const [title, setTitle] = useState(articles[0].title)
+  const [content, setContent] = useState(articles[0].content)
 
   function onLinkClick (id) {
     const nextArticle = articles.find(article => article.id === id)
@@ -77,7 +78,8 @@ const App = () => {
       return
     }
 
-    setCurrentArticle(nextArticle)
+    setTitle(nextArticle.title)
+    setContent(nextArticle.content)
   }
 
   return (
@@ -89,7 +91,7 @@ const App = () => {
         <a href='/grade'>Grade do Curso</a>
       </Menu>
       <Sidebar articles={articles} onLinkClick={onLinkClick} />
-      <Content article={currentArticle} />
+      <Content title={title} content={content} />
       <Footer>
         <H3>Brainn Co.</H3>
         <a href='mailto:contato-inexistente@brainn.co'>Contato</a>
