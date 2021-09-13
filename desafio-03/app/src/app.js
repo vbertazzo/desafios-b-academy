@@ -63,7 +63,7 @@ function App () {
       setError({ active: false, message: '' })
     }
 
-    setCars(cars.filter(car => car.plate !== plate))
+    setCars(prevState => prevState.filter(car => car.plate !== plate))
   }
 
   return (
